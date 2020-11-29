@@ -30,7 +30,20 @@ $key = "supersecret";
 
 hmac($alg, $data, $key);
 ```
-But what if not-expected "kid":0 field will be injected into the header?
+But what if unexpected "kid":0 field will be injected into the header?
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT",
+  "kid": 0
+}
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+```
+
 My assumption is that there may be vulnerable implementations that will treat the $key value as an array:
 ```
 hmac($alg, $data, $key[kid]);
