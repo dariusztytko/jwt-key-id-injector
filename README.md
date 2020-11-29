@@ -61,7 +61,7 @@ python3 injector.py eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODk
 As results two files are created - tokens.txt and tokens_meta.txt.
 tokens.txt contains generated tokens and can be used as a list of payloads for the Burp Intruder.
 If any token is valid (what means that application is vulnerable),
-tokens_meta.txt file can be used to check what algorithm and secret was used to generate the given token.
+tokens_meta.txt file can be used to check what algorithm and secret were used to generate the given token.
 tokens_meta.txt file contains the following data:
 ```
 token1:algorithm:secret
