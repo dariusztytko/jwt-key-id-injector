@@ -53,8 +53,8 @@ As results "s" ($key[0]) value will be used as an HMAC secret.
 ## Usage
 injector.py script takes original JWT token,
 injects "kid":0 field into the header
-and generates tokens signed with the one-letter secrets (ASCII codes: 32 - 126)
-
+and generates tokens signed with the one-letter secrets
+(ASCII codes: 32 - 126 [{space}, !, ", #, ..., x, y, z, {, |, }, ~]):
 ```
 python3 injector.py eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.zbgd5BNF1cqQ_prCEqIvBTjSxMS8bDLnJAE_wE-0Cxg
 ```
