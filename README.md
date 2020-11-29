@@ -43,8 +43,8 @@ But what if unexpected **"kid":0** field will be injected into the header?
   "iat": 1516239022
 }
 ```
-**kid** field is used to choose a key.
-My assumption is that, if kid field is not expected, there may be vulnerable implementation that will treat the string $key value as an array:
+**kid** field is a standard way to choose a key.
+My assumption is that, if **kid** field is not expected, there may be vulnerable implementation that will treat the string $key value as an array:
 ```
 hmac($alg, $data, $key[kid]);
 ```
